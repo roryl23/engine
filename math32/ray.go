@@ -322,7 +322,7 @@ func (ray *Ray) IntersectPlane(plane *Plane, optionalTarget *Vector3) *Vector3 {
 
 	t := ray.DistanceToPlane(plane)
 
-	if t == NaN() {
+	if IsNaN(t) {
 		return nil
 	}
 
